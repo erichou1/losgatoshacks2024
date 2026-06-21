@@ -52,10 +52,28 @@ html {
     background-size: cover;
 }
 
-/* Make the hero fill the screen so the cream thank-you section sits just
-   below the fold (video fills the view on load, no black gap, no cream). */
+/* Make the hero fill the screen and have the video fully cover it, so the
+   cream thank-you section sits just below the fold with no black gap between
+   the video and the cream. */
 .content-1 {
-    min-height: 100vh;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.content-1 .main-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.content-1 .main-video video {
+    width: 100% !important;
+    height: 100vh !important;
+    object-fit: cover !important;
+    top: 0 !important;
 }
 
 .navbar {
@@ -4566,14 +4584,15 @@ tr:hover {
     font-size: 30px;
 }
 
-/* Thank-you banner: a cream "special" section sitting directly under the hero
-   (no black gap above), with a wave shape that curves into the black About
-   section below. Dark text for contrast on the cream background. */
+/* Thank-you banner: a cream "special" section sitting below the hero with a
+   small gap above (kept below the fold so it isn't visible on load) and a
+   wave shape that curves into the black About section below. Dark text for
+   contrast on the cream background. */
 .thank-you-section {
     background-color: #f5ecd7;
     text-align: center;
     margin-top: 0;
-    padding: 4.5rem 2rem 3rem;
+    padding: 4.5rem 2rem 5rem;
     position: relative;
     z-index: 1;
 }
