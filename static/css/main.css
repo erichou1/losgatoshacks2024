@@ -52,6 +52,12 @@ html {
     background-size: cover;
 }
 
+/* Make the hero fill the screen so the cream thank-you section sits just
+   below the fold (video fills the view on load, no black gap, no cream). */
+.content-1 {
+    min-height: 100vh;
+}
+
 .navbar {
     padding-top: 0.5rem;
 
@@ -4558,4 +4564,69 @@ tr:hover {
 }
 .sponsors-name-silver {
     font-size: 30px;
+}
+
+/* Thank-you banner: a cream "special" section sitting directly under the hero
+   (no black gap above), with a wave shape that curves into the black About
+   section below. Dark text for contrast on the cream background. */
+.thank-you-section {
+    background-color: #f5ecd7;
+    text-align: center;
+    margin-top: 0;
+    padding: 4.5rem 2rem 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.thank-you-section .about-heading {
+    margin-top: 0;
+}
+
+.thank-you-section .about-heading h2 {
+    color: #2a2150;
+}
+
+.thank-you-section .about-sub-heading {
+    color: #2a2150;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thank-you-transition-svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+    margin-bottom: -1px;
+    background: #f5ecd7;
+    transform: scaleY(-1);
+}
+
+.thank-you-transition {
+    fill: #000000;
+}
+
+.thank-you-transition-svg + .content-2 {
+    margin-top: 0 !important;
+}
+
+@media (max-width: 1265px) {
+    .thank-you-section {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .thank-you-section {
+        margin-top: 0;
+        padding-top: 3.5rem;
+    }
+
+    .thank-you-section .about-sub-heading {
+        max-width: 90%;
+    }
+
+    .thank-you-transition-svg {
+        height: 50px;
+    }
 }
