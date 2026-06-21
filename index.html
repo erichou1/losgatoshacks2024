@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<!--
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣶⣿⠟⠉⠉⠻⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣾⠿⠉⠀⠀⠀⠀⠀⠹⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⣾
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⣾⡿⠛⠉
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣾⡿⠟⠁⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣴⣿⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣷⣶⣶⣦⣤⣤⣄⣤⡀⣀⣩⣾⣿⠿⠋⠀⠀⠀⠀⠀⣠
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣿⣿⣿⣿⠟⠋⠉⠉⠙⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⢀⡾⠁
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⠁⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⡟⠁⠀⠀⠀⢀⣴⣿⣿⣿⣿⡏⠋⠀⠀⠀⠀⠀⠀⠀⡞⠋⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣼⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⡏⠀⠀⠀⠀⣶⣿⣿⣿⣿⡿⠉⠀⠀⠀⠀⠀⠀⠀⠀⢸⡯⠤⣤
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣿⣿⣿⡏⠀⠀⠀⠀⣼⣿⣿⣿⣿⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡾⠁
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣄⣄⣼⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡿⠋⠀⠀⠀⠀⣼⣿⣿⣿⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢷⣄
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠀⠀⠀⠀⣾⣿⣿⣿⡿⠁⠀⠀⠀⠀⠀⠀⣠⣶⣶⣶⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠿⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻
+⠀⠀⠀⠀⠀⠀⢀⣾⠿⠛⢿⣿⣷⣄⡀⣿⠋⠀⠈⠀⠀⠀⠀⠀⠀⢀⣾⡏⠀⢹⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣠⣤⣦⣼⣿⠀⠀⠀⣿⣿⣿⣿⣿⣦⣀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⢀⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣾⣿⣿⣿⢷⣄⠀⠀⠀⠀⠀⠀⠀
+⠀⣠⣾⡿⠋⠉⠉⠁⠀⠀⠀⠀⠉⢯⡙⠻⣿⣿⣷⣤⡀⠀⠀⠀⠀⢿⣿⣿⣿⣿⡿⠃⢀⡤⠖⠋⣉⣉⣉⣉⠉⠉⠒⠦⣄⠀⠀⠀⢔⡟⡿⠟⠉⣟⣻⣮⣿⠀⠀⠀⠀⠀⠀⠀⠀
+⣾⣿⠋⠀⠀⠀⠀⣀⣀⡀⠀⠀⠀⠀⠙⢦⣄⠉⠻⢿⣿⣷⣦⡀⠀⠈⠙⠛⠛⠋⠀⢰⠟⡇⠀⠀⠈⠻⡿⠛⠁⠀⠀⠀⠈⠳⣄⠀⠸⣧⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀
+⣿⡇⠀⠀⠀⣴⠙⣩⣿⣿⣄⠀⠀⠀⠀⡶⢌⡙⠶⣤⡈⠛⠿⣿⣷⣦⣀⠀⠀⠀⠀⡇⠀⢻⣄⠀⠀⣠⢷⠀⠀⠀⠀⠀⡶⠀⠘⡆⠀⠀⠻⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀
+⣿⡇⠀⠀⢸⣇⢸⣿⣿⣿⣿⠀⠀⠀⠀⡇⠀⠈⠛⠦⣝⡳⢤⣈⠛⠻⣿⣷⣦⣀⠀⠀⠀⠀⠈⠙⠋⠁⠀⠛⠦⢤⡤⠞⠃⠀⠀⢳⠀⠀⠀⠈⠋⠙⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⡇⠀⠀⠈⢿⣄⣿⣿⣿⠏⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠙⠳⢬⣛⠦⠀⠙⢻⣿⣷⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⡇⠀⠀⠀⠀⠉⠛⠋⠁⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠈⣿⠉⢻⣿⣷⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⡇⠀⠀⠀⠀⠀⣠⣄⠀⠀⢰⠶⠒⠒⢧⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⢸⡇⢸⡟⢿⣷⣦⣴⣶⣶⣶⣶⣤⣔⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⡇⠀⠀⣤⠀⠀⠿⠿⠁⢀⡿⠀⠀⠀⡄⠈⠙⡷⢦⣄⡀⠀⠀⠀⠀⠀⠀⠀⣿⠀⢸⡇⢸⡇⠀⣿⠙⣿⣿⣉⠉⠙⠿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⡇⠀⠀⠙⠷⢤⣀⣠⠴⠛⠁⠀⠀⠀⠇⠀⠀⡇⢸⡏⢹⡷⢦⣄⡀⠀⠀⠀⣿⡀⢸⡇⢸⡇⠀⡟⠀⢸⠀⢹⡷⢦⣄⣘⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⣿⠢⣤⡀⠀⠀⠀⠀⠀⠀⣠⠾⣿⣿⡷⣤⣀⡇⠸⡇⢸⡇⢸⠉⠙⠳⢦⣄⡻⢿⣾⣧⣸⣧⠀⡇⠀⢹⡀⢸⡇⢤⣈⠙⠻⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢹⣿⣷⣌⡉⠛⠲⢶⣶⠖⠛⠛⢶⣄⡉⠛⠿⣽⣿⣶⣧⣸⡇⢸⠀⠀⠀⠀⠈⠙⠲⢮⣝⠻⣿⣷⣷⣄⣼⠀⢸⡇⠀⠈⠁⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠈⠙⠻⢿⣷⣶⣤⣉⡻⢶⣄⣀⠈⠙⠳⢦⣈⡉⠻⢿⣿⣷⣾⣦⡀⠀⠀⠀⠀⠀⠀⠈⠙⠲⢭⣛⠿⣿⣷⣼⡇⠀⠀⠀⠀⠈⣿⡇⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⣠
+⠀⠀⠀⠀⠀⠈⠙⠻⢿⣿⣷⣶⣽⣻⡦⠀⠀⠈⠙⠷⣦⣌⡙⠻⢿⣟⣷⣤⣀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠳⢯⣻⡇⠀⠀⠀⠀⠀⢸⣿⠀⣀⠀⠀⠀⠀⠈⠳⣄⡀⠀⠀⢀⣏⡟⠛
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠻⢿⣿⣿⣿⣶⣤⣤⣤⣀⣈⠛⠷⣤⣈⡛⠷⢽⡻⢶⣄⣀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠳⢤⣀⠀⠀⢸⣿⡀⠈⠻⢭⣲⣴⣴⠗⠋⠛⠶⠿⠿⠃⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⣿⡿⠛⠉⠙⠛⠛⠻⢷⣦⣄⣩⣿⠶⠖⠛⠛⠛⠛⠛⠛⠿⢷⣶⣦⣄⠀⠀⠀⠀⠉⢻⣶⣿⣿⠇⠀⠀⠀⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⠁⠀⠀⠀⠀⠀⠀⠀⣿⣿⠋⠀⠀⠀⠀⢀⣠⡶⠂⠀⠀⠀⠈⠙⠿⣿⣦⡄⠀⠀⣸⣿⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⣴⠏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⢿⣶⣄⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⢸⣧⠀⠀⢀⡾⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠙⢿⣿⣇⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡿⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡿⠦⠠⠋⠀⠀⠀⠀⠀⢀⡶⠂⠀⠀⠀⠀⠀⠀⠧⠤⠄⠙⡿⠿⠦⠤⠤⠤⠤⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+-->
+
+<head>
+    <title>Los Gatos Hacks</title>
+    <link rel="shortcut icon" href="/static/images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <!-- CSS only -->
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.14.0/css/all.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href='/static/css/main.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Javascript Only-->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body class="body" style="background-color: black;">
+    <div class="content-1">
+        <div class="warning-header" id="warningheader">
+            <h2>You are viewing this page on an unsupported browser or device. For
+                best performance, use <a href="https://www.google.com/chrome/" target="_blank">Chrome</a> or <a
+                    href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a></h2>
+            <span onclick="hide();" style="cursor: pointer">Dismiss</span>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="/"><img src="/static/images/losgatoshackslogosimple.png"></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link home-navbar" href='/'>Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link information-navbar" href='/#content-2'>Information</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link about-navbar faq-navbar" href="/#faq-heading">FAQ</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link about-navbar schedule-navbar" href="/#schedule-heading">Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link about-navbar sponsors-navbar" href="/#sponsors-heading">Sponsors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link about-navbar" href="/#about-heading">Team</a>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+                <div class="navbar-right">
+                    <div class="social-icons-navbar">
+
+                        <a target="_blank" href="https://discord.gg/CuumumdXtg" class="navbar-right-discord">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="h-6 w-6 iconify iconify--tabler" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M8 12a1 1 0 1 0 2 0a1 1 0 0 0-2 0m6 0a1 1 0 1 0 2 0a1 1 0 0 0-2 0"></path><path d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833-1.667 3.5-3c.667-1.667.5-5.833-1.5-11.5c-1.457-1.015-3-1.34-4.5-1.5l-.972 1.923a11.913 11.913 0 0 0-4.053 0L9 4c-1.5.16-3.043.485-4.5 1.5c-2 5.667-2.167 9.833-1.5 11.5c.667 1.333 2 3 3.5 3c.5 0 2-2 2-3"></path><path d="M7 16.5c3.5 1 6.5 1 10 0"></path></g></svg>
+                        </a>
+                        <a target="_blank" href="https://bank.hackclub.com/donations/start/los-gatos-hacks" class="navbar-right-hackclub">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="h-6 w-6 iconify iconify--tabler" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M3 10h18M5 6l7-3l7 3M4 10v11m16-11v11M8 14v3m4-3v3m4-3v3"></path></svg>
+                        </a>
+                        <a target="_blank" class="navbar-right-github" href="https://github.com/erichou1/losgatoshacks2024">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="h-6 w-6 iconify iconify--tabler" width="1em" height="1em" viewBox="0 0 15 15">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.3">
+                                <path d="M5.65021 12.4769C5.9136 12.3939 6.05986 12.1132 5.9769 11.8498C5.89394 11.5864 5.61317 11.4401 5.34979 11.5231L5.65021 12.4769ZM2.00197 9.51639L1.51836 9.38942L1.26442 10.3566L1.74803 10.4836L2.00197 9.51639ZM9 14.5V15H10V14.5H9ZM9.0625 9.6875L9.00906 9.19036C8.81734 9.21097 8.65455 9.33999 8.5907 9.52194C8.52686 9.70389 8.57333 9.90634 8.71013 10.0422L9.0625 9.6875ZM12.5 5.9125H13L13 5.91089L12.5 5.9125ZM11.6669 3.90625L11.2008 3.72524C11.1291 3.90974 11.1731 4.11914 11.3128 4.2593L11.6669 3.90625ZM11.6169 1.88937L12.0734 1.68549C12.0132 1.55057 11.8963 1.44921 11.7542 1.40861L11.6169 1.88937ZM9.44438 2.68125L9.31826 3.16508C9.45382 3.20042 9.59799 3.17726 9.71566 3.10125L9.44438 2.68125ZM5.55562 2.68125L5.28442 3.1013C5.40208 3.17727 5.54621 3.20041 5.68174 3.16508L5.55562 2.68125ZM3.38313 1.88937L3.24564 1.40865C3.10362 1.44926 2.98682 1.55061 2.92658 1.68549L3.38313 1.88937ZM3.33313 3.90625L3.68715 4.25933C3.82693 4.11917 3.87087 3.90975 3.79921 3.72524L3.33313 3.90625ZM2.5 5.92875H3L3 5.92747L2.5 5.92875ZM5.9375 9.6875L6.29045 10.0417C6.42616 9.9064 6.47265 9.7055 6.41015 9.52439C6.34765 9.34328 6.18715 9.21381 5.99691 9.19104L5.9375 9.6875ZM5.5 11H6C6 10.9878 5.99955 10.9756 5.99866 10.9634L5.5 11ZM5 14.5V15H6V14.5H5ZM5.34979 11.5231C4.74678 11.713 4.3643 11.6918 4.11084 11.6082C3.85886 11.525 3.66567 11.3578 3.4814 11.1175C3.38808 10.9959 3.3021 10.8623 3.21181 10.7161C3.12597 10.5771 3.02879 10.4142 2.93047 10.2692C2.73966 9.9878 2.45815 9.63616 2.00197 9.51639L1.74803 10.4836C1.82748 10.5045 1.93206 10.5786 2.10281 10.8304C2.18527 10.952 2.26274 11.0825 2.36104 11.2417C2.4549 11.3936 2.56254 11.5627 2.68797 11.7262C2.9412 12.0563 3.28599 12.389 3.79744 12.5578C4.30742 12.7261 4.91384 12.7088 5.65021 12.4769L5.34979 11.5231ZM10 10.9375C10 10.6201 9.98611 10.3301 9.89602 10.0596C9.8001 9.77159 9.63428 9.55071 9.41487 9.33276L8.71013 10.0422C8.8651 10.1962 8.91802 10.2878 8.94726 10.3756C8.98232 10.4809 9 10.6299 9 10.9375H10ZM9.11594 10.1846C10.0189 10.0876 11.004 9.85986 11.7626 9.20319C12.5429 8.52773 13 7.47445 13 5.9125H12C12 7.2718 11.6105 8.01226 11.1081 8.44712C10.5841 8.90076 9.8505 9.09992 9.00906 9.19036L9.11594 10.1846ZM13 5.91089C12.9971 5.02667 12.6453 4.17934 12.0209 3.5532L11.3128 4.2593C11.751 4.69877 11.998 5.29349 12 5.91411L13 5.91089ZM12.133 4.08726C12.2823 3.70286 12.3539 3.29267 12.3436 2.88041L11.3439 2.9052C11.3509 3.18532 11.3022 3.46404 11.2008 3.72524L12.133 4.08726ZM12.3436 2.88041C12.3334 2.46816 12.2416 2.06202 12.0734 1.68549L11.1603 2.09326C11.2746 2.34911 11.337 2.62508 11.3439 2.9052L12.3436 2.88041ZM11.6169 1.88937C11.7542 1.40861 11.7538 1.40848 11.7533 1.40834C11.7531 1.4083 11.7527 1.40816 11.7523 1.40807C11.7517 1.40789 11.751 1.40771 11.7504 1.40752C11.749 1.40716 11.7477 1.40678 11.7462 1.4064C11.7434 1.40564 11.7404 1.40485 11.7372 1.40405C11.7309 1.40245 11.7239 1.40078 11.7161 1.39909C11.7007 1.39571 11.6826 1.39225 11.6617 1.38904C11.6199 1.38261 11.5674 1.37725 11.504 1.37556C11.3769 1.37216 11.2079 1.38354 10.9947 1.42908C10.5691 1.52001 9.97001 1.7465 9.17309 2.26125L9.71566 3.10125C10.435 2.63663 10.9221 2.46717 11.2037 2.40701C11.3441 2.37701 11.434 2.37404 11.4773 2.3752C11.4991 2.37578 11.5097 2.37742 11.5097 2.37742C11.5098 2.37743 11.5072 2.37704 11.5021 2.37592C11.4996 2.37537 11.4964 2.37463 11.4927 2.37368C11.4908 2.3732 11.4887 2.37267 11.4865 2.37209C11.4854 2.37179 11.4843 2.37148 11.4831 2.37116C11.4826 2.37099 11.482 2.37083 11.4814 2.37066C11.4811 2.37057 11.4806 2.37044 11.4804 2.3704C11.48 2.37027 11.4795 2.37014 11.6169 1.88937ZM9.57049 2.19742C8.21284 1.84354 6.78716 1.84354 5.42951 2.19742L5.68174 3.16508C6.87399 2.85431 8.12601 2.85431 9.31826 3.16508L9.57049 2.19742ZM5.82683 2.2612C5.02965 1.74649 4.43054 1.52002 4.00504 1.42909C3.79191 1.38354 3.62298 1.37216 3.49591 1.37556C3.4325 1.37725 3.38003 1.38261 3.33822 1.38905C3.31734 1.39226 3.2992 1.39573 3.28376 1.39911C3.27604 1.4008 3.26901 1.40247 3.26266 1.40408C3.25948 1.40488 3.25647 1.40567 3.25364 1.40643C3.25222 1.40681 3.25085 1.40719 3.24951 1.40756C3.24885 1.40774 3.24819 1.40793 3.24755 1.40811C3.24722 1.4082 3.24675 1.40833 3.24659 1.40838C3.24611 1.40851 3.24564 1.40865 3.38313 1.88937C3.52061 2.3701 3.52014 2.37023 3.51968 2.37037C3.51953 2.37041 3.51907 2.37054 3.51876 2.37062C3.51816 2.3708 3.51756 2.37096 3.51698 2.37112C3.51581 2.37145 3.51467 2.37176 3.51357 2.37206C3.51138 2.37265 3.50934 2.37318 3.50745 2.37365C3.50367 2.37461 3.5005 2.37535 3.49795 2.3759C3.49286 2.37702 3.49028 2.37742 3.49029 2.37742C3.4903 2.37741 3.49295 2.37701 3.49829 2.37653C3.50363 2.37605 3.51172 2.37549 3.52262 2.3752C3.56589 2.37405 3.65567 2.377 3.79606 2.40701C4.07758 2.46717 4.56473 2.63664 5.28442 3.1013L5.82683 2.2612ZM2.92658 1.68549C2.75843 2.06202 2.66658 2.46816 2.65636 2.88041L3.65606 2.9052C3.663 2.62508 3.72541 2.34911 3.83967 2.09326L2.92658 1.68549ZM2.65636 2.88041C2.64614 3.29267 2.71775 3.70286 2.86704 4.08726L3.79921 3.72524C3.69777 3.46404 3.64911 3.18532 3.65606 2.9052L2.65636 2.88041ZM2.9791 3.55317C2.66761 3.8655 2.42079 4.23621 2.25278 4.64407L3.1774 5.02495C3.29532 4.7387 3.46854 4.47853 3.68715 4.25933L2.9791 3.55317ZM2.25278 4.64407C2.08477 5.05193 1.99887 5.48892 2 5.93003L3 5.92747C2.99921 5.61789 3.05949 5.31119 3.1774 5.02495L2.25278 4.64407ZM2 5.92875C2 7.48166 2.45806 8.52573 3.23874 9.19657C3.99602 9.84729 4.97941 10.0764 5.87809 10.184L5.99691 9.19104C5.15121 9.08984 4.41586 8.88958 3.89048 8.43812C3.3885 8.00677 3 7.27584 3 5.92875H2ZM5.58455 9.33335C5.08499 9.83121 4.95633 10.4236 5.00134 11.0366L5.99866 10.9634C5.96867 10.5551 6.05126 10.28 6.29045 10.0417L5.58455 9.33335ZM5 11V14.5H6V11H5ZM10 14.5V13H9V14.5H10ZM10 13V10.9375H9V13H10Z" fill="#000000"/></g>
+                                </svg>
+                        </a>
+                        <div class="lghs-banner">
+                            <a target="_blank" href="https://hackclub.com/">
+                                <img class="lghs-banner-image" src="/static/images/lghs-banner.png">
+                            </a>
+                        </div>
+                    </div>
+
+                    <ul class="toggle">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <div class="sidebar">
+                        <ul class="menu">
+                            <div class="menu-text">
+                                <p>Menu</p>
+                            </div>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/#content-2">Information</a></li>
+                            <li><a href="/#faq-heading">FAQ</a></li>
+                            <li><a href="/#schedule-heading">Schedule</a></li>
+                            <li><a href="/#sponsors-heading">Sponsors</a></li>
+                            <li><a href="/#about-heading">Team</a></li>
+
+                        </ul>
+                        <ul class="social-icon">
+                            <a target="_blank" href="https://discord.gg/CuumumdXtg" class="social-icon-discord">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="h-6 w-6 iconify iconify--tabler" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M8 12a1 1 0 1 0 2 0a1 1 0 0 0-2 0m6 0a1 1 0 1 0 2 0a1 1 0 0 0-2 0"></path><path d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833-1.667 3.5-3c.667-1.667.5-5.833-1.5-11.5c-1.457-1.015-3-1.34-4.5-1.5l-.972 1.923a11.913 11.913 0 0 0-4.053 0L9 4c-1.5.16-3.043.485-4.5 1.5c-2 5.667-2.167 9.833-1.5 11.5c.667 1.333 2 3 3.5 3c.5 0 2-2 2-3"></path><path d="M7 16.5c3.5 1 6.5 1 10 0"></path></g></svg>
+                            </a>
+                            <a target="_blank" href="https://bank.hackclub.com/donations/start/los-gatos-hacks" class="social-icon-hackclub">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="h-6 w-6 iconify iconify--tabler" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M3 10h18M5 6l7-3l7 3M4 10v11m16-11v11M8 14v3m4-3v3m4-3v3"></path></svg>
+                            </a>
+                            <a target="_blank" class="social-icon-github" href="https://github.com/erichou1/losgatoshacks2024">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="h-6 w-6 iconify iconify--tabler" width="1em" height="1em" viewBox="0 0 15 15">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.3">
+                                    <path d="M5.65021 12.4769C5.9136 12.3939 6.05986 12.1132 5.9769 11.8498C5.89394 11.5864 5.61317 11.4401 5.34979 11.5231L5.65021 12.4769ZM2.00197 9.51639L1.51836 9.38942L1.26442 10.3566L1.74803 10.4836L2.00197 9.51639ZM9 14.5V15H10V14.5H9ZM9.0625 9.6875L9.00906 9.19036C8.81734 9.21097 8.65455 9.33999 8.5907 9.52194C8.52686 9.70389 8.57333 9.90634 8.71013 10.0422L9.0625 9.6875ZM12.5 5.9125H13L13 5.91089L12.5 5.9125ZM11.6669 3.90625L11.2008 3.72524C11.1291 3.90974 11.1731 4.11914 11.3128 4.2593L11.6669 3.90625ZM11.6169 1.88937L12.0734 1.68549C12.0132 1.55057 11.8963 1.44921 11.7542 1.40861L11.6169 1.88937ZM9.44438 2.68125L9.31826 3.16508C9.45382 3.20042 9.59799 3.17726 9.71566 3.10125L9.44438 2.68125ZM5.55562 2.68125L5.28442 3.1013C5.40208 3.17727 5.54621 3.20041 5.68174 3.16508L5.55562 2.68125ZM3.38313 1.88937L3.24564 1.40865C3.10362 1.44926 2.98682 1.55061 2.92658 1.68549L3.38313 1.88937ZM3.33313 3.90625L3.68715 4.25933C3.82693 4.11917 3.87087 3.90975 3.79921 3.72524L3.33313 3.90625ZM2.5 5.92875H3L3 5.92747L2.5 5.92875ZM5.9375 9.6875L6.29045 10.0417C6.42616 9.9064 6.47265 9.7055 6.41015 9.52439C6.34765 9.34328 6.18715 9.21381 5.99691 9.19104L5.9375 9.6875ZM5.5 11H6C6 10.9878 5.99955 10.9756 5.99866 10.9634L5.5 11ZM5 14.5V15H6V14.5H5ZM5.34979 11.5231C4.74678 11.713 4.3643 11.6918 4.11084 11.6082C3.85886 11.525 3.66567 11.3578 3.4814 11.1175C3.38808 10.9959 3.3021 10.8623 3.21181 10.7161C3.12597 10.5771 3.02879 10.4142 2.93047 10.2692C2.73966 9.9878 2.45815 9.63616 2.00197 9.51639L1.74803 10.4836C1.82748 10.5045 1.93206 10.5786 2.10281 10.8304C2.18527 10.952 2.26274 11.0825 2.36104 11.2417C2.4549 11.3936 2.56254 11.5627 2.68797 11.7262C2.9412 12.0563 3.28599 12.389 3.79744 12.5578C4.30742 12.7261 4.91384 12.7088 5.65021 12.4769L5.34979 11.5231ZM10 10.9375C10 10.6201 9.98611 10.3301 9.89602 10.0596C9.8001 9.77159 9.63428 9.55071 9.41487 9.33276L8.71013 10.0422C8.8651 10.1962 8.91802 10.2878 8.94726 10.3756C8.98232 10.4809 9 10.6299 9 10.9375H10ZM9.11594 10.1846C10.0189 10.0876 11.004 9.85986 11.7626 9.20319C12.5429 8.52773 13 7.47445 13 5.9125H12C12 7.2718 11.6105 8.01226 11.1081 8.44712C10.5841 8.90076 9.8505 9.09992 9.00906 9.19036L9.11594 10.1846ZM13 5.91089C12.9971 5.02667 12.6453 4.17934 12.0209 3.5532L11.3128 4.2593C11.751 4.69877 11.998 5.29349 12 5.91411L13 5.91089ZM12.133 4.08726C12.2823 3.70286 12.3539 3.29267 12.3436 2.88041L11.3439 2.9052C11.3509 3.18532 11.3022 3.46404 11.2008 3.72524L12.133 4.08726ZM12.3436 2.88041C12.3334 2.46816 12.2416 2.06202 12.0734 1.68549L11.1603 2.09326C11.2746 2.34911 11.337 2.62508 11.3439 2.9052L12.3436 2.88041ZM11.6169 1.88937C11.7542 1.40861 11.7538 1.40848 11.7533 1.40834C11.7531 1.4083 11.7527 1.40816 11.7523 1.40807C11.7517 1.40789 11.751 1.40771 11.7504 1.40752C11.749 1.40716 11.7477 1.40678 11.7462 1.4064C11.7434 1.40564 11.7404 1.40485 11.7372 1.40405C11.7309 1.40245 11.7239 1.40078 11.7161 1.39909C11.7007 1.39571 11.6826 1.39225 11.6617 1.38904C11.6199 1.38261 11.5674 1.37725 11.504 1.37556C11.3769 1.37216 11.2079 1.38354 10.9947 1.42908C10.5691 1.52001 9.97001 1.7465 9.17309 2.26125L9.71566 3.10125C10.435 2.63663 10.9221 2.46717 11.2037 2.40701C11.3441 2.37701 11.434 2.37404 11.4773 2.3752C11.4991 2.37578 11.5097 2.37742 11.5097 2.37742C11.5098 2.37743 11.5072 2.37704 11.5021 2.37592C11.4996 2.37537 11.4964 2.37463 11.4927 2.37368C11.4908 2.3732 11.4887 2.37267 11.4865 2.37209C11.4854 2.37179 11.4843 2.37148 11.4831 2.37116C11.4826 2.37099 11.482 2.37083 11.4814 2.37066C11.4811 2.37057 11.4806 2.37044 11.4804 2.3704C11.48 2.37027 11.4795 2.37014 11.6169 1.88937ZM9.57049 2.19742C8.21284 1.84354 6.78716 1.84354 5.42951 2.19742L5.68174 3.16508C6.87399 2.85431 8.12601 2.85431 9.31826 3.16508L9.57049 2.19742ZM5.82683 2.2612C5.02965 1.74649 4.43054 1.52002 4.00504 1.42909C3.79191 1.38354 3.62298 1.37216 3.49591 1.37556C3.4325 1.37725 3.38003 1.38261 3.33822 1.38905C3.31734 1.39226 3.2992 1.39573 3.28376 1.39911C3.27604 1.4008 3.26901 1.40247 3.26266 1.40408C3.25948 1.40488 3.25647 1.40567 3.25364 1.40643C3.25222 1.40681 3.25085 1.40719 3.24951 1.40756C3.24885 1.40774 3.24819 1.40793 3.24755 1.40811C3.24722 1.4082 3.24675 1.40833 3.24659 1.40838C3.24611 1.40851 3.24564 1.40865 3.38313 1.88937C3.52061 2.3701 3.52014 2.37023 3.51968 2.37037C3.51953 2.37041 3.51907 2.37054 3.51876 2.37062C3.51816 2.3708 3.51756 2.37096 3.51698 2.37112C3.51581 2.37145 3.51467 2.37176 3.51357 2.37206C3.51138 2.37265 3.50934 2.37318 3.50745 2.37365C3.50367 2.37461 3.5005 2.37535 3.49795 2.3759C3.49286 2.37702 3.49028 2.37742 3.49029 2.37742C3.4903 2.37741 3.49295 2.37701 3.49829 2.37653C3.50363 2.37605 3.51172 2.37549 3.52262 2.3752C3.56589 2.37405 3.65567 2.377 3.79606 2.40701C4.07758 2.46717 4.56473 2.63664 5.28442 3.1013L5.82683 2.2612ZM2.92658 1.68549C2.75843 2.06202 2.66658 2.46816 2.65636 2.88041L3.65606 2.9052C3.663 2.62508 3.72541 2.34911 3.83967 2.09326L2.92658 1.68549ZM2.65636 2.88041C2.64614 3.29267 2.71775 3.70286 2.86704 4.08726L3.79921 3.72524C3.69777 3.46404 3.64911 3.18532 3.65606 2.9052L2.65636 2.88041ZM2.9791 3.55317C2.66761 3.8655 2.42079 4.23621 2.25278 4.64407L3.1774 5.02495C3.29532 4.7387 3.46854 4.47853 3.68715 4.25933L2.9791 3.55317ZM2.25278 4.64407C2.08477 5.05193 1.99887 5.48892 2 5.93003L3 5.92747C2.99921 5.61789 3.05949 5.31119 3.1774 5.02495L2.25278 4.64407ZM2 5.92875C2 7.48166 2.45806 8.52573 3.23874 9.19657C3.99602 9.84729 4.97941 10.0764 5.87809 10.184L5.99691 9.19104C5.15121 9.08984 4.41586 8.88958 3.89048 8.43812C3.3885 8.00677 3 7.27584 3 5.92875H2ZM5.58455 9.33335C5.08499 9.83121 4.95633 10.4236 5.00134 11.0366L5.99866 10.9634C5.96867 10.5551 6.05126 10.28 6.29045 10.0417L5.58455 9.33335ZM5 11V14.5H6V11H5ZM10 14.5V13H9V14.5H10ZM10 13V10.9375H9V13H10Z" fill="#000000"></path></g>
+                                    </svg>
+                            </a>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="content">
+            <div class="main-video">
+                <video autoplay loop style="background-image: url(/static/images/hackathonvideo.mp4);" muted playsinline
+                    data-object-fit="cover">
+                    <source src="/static/images/hackathonvideo.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="main-text-container">
+                <div class="main-heading">
+                    <p>Los Gatos Hacks 2024</p>
+                </div>
+                <div class="sub-heading">
+                    <p>1.20-1.21</p>
+                </div>
+                <a class="register-button button" target="_blank"
+                    href="/form/">Register
+                </a>
+            </div>
+        </div>
+
+        <body>
+            <div id="header" class="container-fluid">
+                <a href="#content-2" class="btn btn-circle">
+                    <i class="fa fa-angle-double-down fa-1x"></i>
+                </a>
+            </div>
+    </div>
+    </div>
+    </div>
+    <div id="content-2" class="content-2">
+        <div class="content-2-heading">
+            <p>About</p>
+        </div>
+        <div class="content-2-heading-paragraph">
+            <p>Los Gatos Hacks is a hackathon where students from across
+                California
+                will
+                attend. Los Gatos Hacks is a 24-hour in-person event on the weekend
+                of January 20th. If you're looking for an opportunity to flex your tech skills, collaborate with other
+                innovative minds, and work on exciting projects, then you've come to the right place. Over the course of
+                this hackathon, you'll have the chance to build something awesome from scratch, network with industry
+                professionals, and compete for some amazing prizes. But Los Gatos Hacks isn't just about the competition
+                - it's
+                also
+                about the community. We believe that everyone has something valuable to contribute, whether you're a
+                seasoned coder or just starting out. That's why we've designed this event to be inclusive and
+                supportive,
+                with plenty of opportunities to learn, grow, and connect. So if you're ready to dive into the world of
+                hackathons and see what you're capable of, then join us for Los Gatos Hacks!
+
+            </p>
+        </div>
+        <div class="planet-2">
+            <img src="/static/images/planet-4.png">
+        </div>
+        <div class="">
+            <div class="video-2">
+                <video autoplay loop style="background-image: url(/static/images/hackathonvideo.mp4);" muted playsinline
+                    data-object-fit="cover" <source src="/static/images/video-2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-3">
+                <video autoplay loop style="background-image: url(/static/images/hackathonvideo.mp4);" muted playsinline
+                    data-object-fit="cover" <source src="/static/images/video-3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-4">
+                <video autoplay loop style="background-image: url(/static/images/hackathonvideo.mp4);" muted playsinline
+                    data-object-fit="cover" <source src="/static/images/video-1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="heading-1">
+                <strong>Dinner with leaders in tech, Paid Internship Opportunities and $1,000+ of Prizes </strong>
+            </div>
+            <!-- <div class="card-header-prizes">
+                <p>Prizes</p>
+            </div> -->
+            <div class="card-container">
+                <div class="card-1 cards">
+                    <div class="card-heading">
+                        <!-- <p>First Place</p> -->
+                        <p>Prizes<img class="prizes-image-1" src="/static/images/prizes-logo.png"></p>
+                    </div>
+                    <div class="card-paragraph">
+                        <div class=card-paragraph-heading>
+                            <!-- <p>Paid Internship @ Google</p> -->
+                        </div>
+                        <p>On the final day of the hackathon, participants will have the opportunity to be recognized
+                            for their
+                            outstanding contributions and hard work. The top five winning teams will receive exciting
+                            prizes. It is
+                            worth noting that all participants will also recieve a prize for simply participating.</p>
+                        <!-- <div class="prize-image-1">
+                            <img class="prize-image-1-img"
+                                src="data:image/png;base64,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">
+                        </div>
+                        <p class="card-caption">* Each team member will recieve one of each prize</p> -->
+
+                    </div>
+                </div>
+                <div class="card-2 cards">
+                    <div class="card-heading">
+                        <!-- <p>Second Place</p> -->
+                        <p>Code<img class="code-image-1" src="/static/images/code-logo.png"></p>
+                    </div>
+                    <div class="card-paragraph">
+                        <!-- <div class=card-paragraph-heading>
+                            <p>Dinner with Elon Musk</p>
+                        </div> -->
+                        <p>Industry experts from Google, Microsoft, and Nvidia will be present at our hackathon,
+                            offering
+                            participants the chance to receive feedback, collaborate, and gain insights into the tech
+                            industry.
+                            Workshops, mentoring sessions, and networking events will allow for meaningful interactions
+                            between
+                            students and experts, benefiting both parties.</p>
+                        <!-- <div class="prize-image-1">
+                            <img class="prize-image-1-img"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAk1BMVEX///+3HByzAAC2FBS2GBi1AAC1Cwu1EBC2Fha1Dw+1CAj++/u1BQX68PCxAAD04ODks7Pnvb2+PDzz29valpbNcHD88/PIYWHYkJDLZ2f35eXpw8PfpKTDTEzcnZ2+ODi6JCTEVVXRfHztzMzUhoa7LS3RgoLsysrEUVG7KyvPdnbjr6/x1dXAQkLak5PcoKDLXV16ZybEAAAKeElEQVR4nO2da5uyIBCGC0FTM7OTpVlmWW2H3ff//7oXs7aDCGi1CZf3l712N4kRHGYGnmo0ampqampqampqampqampqahiYF0Yjy/I82+73D4dDv2/bnmdZo9Hv/z/dUU5G2Ajv4Heng/E6GrqL4DgPIUII0MD/b4XzY7Bwh9F6PJh2/QNuxRp92pgbRvZh6cxWQzeYhxpKO902VF3TlFYLNnmArZaiabpqtNPbgbRwHrjD1cxZHuwP2upturNhEDdV3CtkqNggyGcQh8kQm6waScNqMw6Gs+7G+0PLRpY/XQfKabBU5WVW5VurqKehVYL11H/z9B3Z/my3DZMhU95tGMFUJRnUcLub+W+ZurazWsQIJKP257bd24mfChQvVk7/dcZZzmCrYPehfda2W6CGnZK2HTjWs8aZXjf6wrOy1MDBxGEomq6rCYZhtNvtZHUA+Cf+7fRXXdeUxEWVal9JZm3U9Uovp7YTHRFQC7w5tkg3LisgMppxD69zk+FwF0XRer1ercbj78H3eLxa4d/w33bD4QSvm/O4aaDL6mjoCucik76lCtAxcuzig+dHcxWoCs97QOXs7YARB5P1YLp3ljaOWEac0Uoa9Iwse+nsp4P1JIgNcPbUfK5awT2dR36BobS6LgAq805CRU+eejxS/3YzHIs8/UzcdgHHRrPdohc38TsYGvMpgS0VALfL1QX7Z4GAxrItmVXNoxv9bPqvNIxgan8zjdxjiDiWKA2gxQ9rvn4fsY+iGpdEZihY/2w86+8CZtPyljjMaCcRHdVMDaHjN7Upv5N/dQtfjkJ35vxlBHWP58zcEPdCa+V3s+PT21gj8sgZoD13f5ZViPlHyx93joBBHk20ZlxuzjP+Ey87Co4h7CplcabtrBf4uct2ds7s5vJuEBMXdfyuxNBlGS3Hx8Tp3w3hkn3d+GIidirtOHKqad2FkRPF7av7QWOei07zFOoAuvuCoQJeua1TueKw2fiO43S7+27XcfwN+cYukxedX4NftDmcihvWqGhVw967EOjwNEe5LugjHAoZQ77lE99Fr3/AyfBqN1kce3EIDULZokO6teMOoahhwDDuHReT3Wq23xz6NmcnrO7QwAEm4kw4Bp0hx9w0+353MAzmoQJQUrlQdS0/hkZO5nqH6LXTeF3T1aSigZeFEAeC467fZw/ryBl2BnwGsizDfmw2iVEnDR35ahcQPU54G3FdlwTzSdDbQfFkhv35mx26ZfuDXYDdK9IpSy6RRy9OWJUYtHRsqBrsBj7v1C1q3Wa8+HoiyUfDu+aG5DnKIk3xvxbjzWuttJzVHCdIzyX5YHrT4hQ80xRex5A6Xz2f4afWdaO4A4wiWWlOt24W4yXXQ0hvrmWAThzxevw87KmrPgQN5WmFl95Y4auaxMuaOy2e4J8Z7bftJ2fmPWpwbjlQX9doEnlt92UCL8slxLVPAlanpldPPYQEcG7glrCxuLeDyQaEQvO1IFn4HYqBEF/fKrE98OCp+TBDRi3jt1ctNd1QUeL58Rj8m+f3D2p2w6ZMfDhfBMfePFbSBtm1ojPaV6lIwG4yZylUksJCbzd1Nn3rUlnbUwZfm4/mlBuHuunNNU2rv3Gmwx62tM1egJVmSWdj00cRx+etYOVn3PWSNr2VNu22ocNjY56/OiqMoq0Wlvamdpjv9CBQdj6xYmMZtO7QgAZxdfOcnQLybVTLG4g7G+SMBwThNNd7hWVXGPiV1+Ro2syzEQXPLfoRsWEdTSnXuJwuKtvsJL9Rc0Ysc0IQPWUfpqvp2du2pRYUf8pF1bhd2n1reIQJpWrdZw3EDW8f1y80pPtm2oJHBdBLnWZmiQaL19RuZ+DO4aj/GK/3KGVlKh3WE7W9m08qoI55EazJTQAHFebqWvI5hC1Ww6Zx9QoKmrwyR/SP4JIOAPbM/1fORM1ltry/PAAtcGRU74ti7r9Srwqb7ABp3C5lYZtd7DTTOA6C+AUeJtM4XpLw2BisfYHGzZ0uBsfsaERqsovWnL6pIuVsEQJ79uvskhZyxCZ7gNA2W5p8Hf1Bj2NjwGqWOnnQ5PAcm97giRiNC67psS2TOyvbl73/+9mVKVOoT8dff8i0TNxGj9kqxqGUhZnksMJ4JcqrsPW58wElmBcviLb49v6qQokUkSNmqxKD4g8ies3m31/hF49qGMlh1fBKWCiUo2k0SszST3e5IMeicZty/HSXC7IqmiJyJIfVglbaJ8KTHFaKflFXA1549v5PMIuOIapIWsRPQVejBOwmK0ZULEUUKjlMmRWbpujn0x0uzLKYqwEiJYcpnlEkRYSqYDEbxuwVSRFbPeFcacEUUbDkMGVc5EHkO71cMQqliIIlhyn9IstFW7SYLcEsUNrn2dCqIAXiNuGSw5SI/1wNz5ZdBenyP4hItOQw5cDvTAWM2RLMAhYK6WgajS/euK0Vf7qrJRnypojq7tNdLQn36S8Bk8MU7rgNbD7d1ZJY3GP4Xj34+zBjPlfTYitbq8oke3CTBO1YacXhPP0lXEH/CudBU/DOM07vxeZzNRn1pThYX1w60S9RXSkm4EkRBSzoX+E6/SVszJbAtYsoaHKYQhUI/VrIcZ6zsnDFbcLGbCc4BEIw/HQnn4IjbhM4ZkvgSBGFTQ5TOOI2IQv6VywOC4V2NI0GU7QMm5/u4pMwBUJC7hzewkwRBU4OU7qsB1G4016PMAVCPFKgSsMSCMFQcFfKFAgpi0938GkYKaLQyWEKQyAklBSIDEMgJJQUiAxdIASheKe9MlAFQoJJgchQ4zbhY7YEqkAIzT7dvRdA3UUUPDlMoQqERJMCkaHO0k937iVQTn8JXdC/QkkRhU8OUyilfcTxAQ0CQBEICScFImPmftAlFE8KRCZ3F1ESR0MRCAkoBSKTKxASvKB/JVcgJOix0iyeTnY1UJciZmvkC4SElAKRyREISZEcpozJrkZIKRAZn2yhFMlhSo5AiPebDATAJO4iCr9zeAsxRRRUCkRmTRIICSoFIkMUCAl92usRokBImpgtgSgQElUKRIZwal9YKRAZwi6iBDuHtxBOf0mTHKYQSvvCSoHIEA6ain2sNIOZ2UUUWApEZvKYIgp+rDRL5rO/JCnoX8kcNBVYCkQmIxCSKDlMeRQIwa9qf3NkCR5K+9IU9K88xG3SFPSvPOwiSpUcpjwIhIDIUiAyo/vlAkjnaB4EQoJLgcjcCYSki9kS7lJEyZLDlLsUUaKC/pU7gZDoUiAit5/9Jehne7G42UWUaOfwlpvTX9Ilhyk3AiHhpUBkbgRCwkuByFi/UY0EUiAyvwIhvm8FEpDfFFGygv6VX4GQBFIgMr8CIQmkQGQuAiHBvhWoCOddRMl2Dm85C4QkjdkSzgdNpZACkTmniFImhylngZAcUiAy51n66W68kVNpX8KC/pVTiihpcphyKu1LIgUicxIISSIFIjMyYBMaEhb0fzGxq1ECKetsFyJVxp3DW36QnAX9K0sg487hLZ4ONYljtkYiENLlkQKRcZG8yWHKGMgcsyX4HXmTw5S+1DHbCePTHXg7/z7dgbcj+2NYU1NTU1NTU1NTUyMp/wEoFp/Z9K0iygAAAABJRU5ErkJggg==">
+                        </div>
+                        <p class="card-caption">* Each team member will recieve one of each prize</p> -->
+
+                    </div>
+                </div>
+                <div class="card-3 cards">
+                    <div class="card-heading">
+                        <!-- <p>Third Place</pF> -->
+                        <p>Activities<img class="activities-image-1" src="/static/images/activities-logo.png"></p>
+                    </div>
+                    <div class="card-paragraph">
+                        <!-- <div class=card-paragraph-heading>
+                        <p>Tour of Google Campus</p>
+                    </div> -->
+                        <p>Our hackathon will feature a Clash Royale and Super Smash Bros tournament in addition to a
+                            tech scavenger
+                            hunt to
+                            promote collaboration, creativity, and strategic thinking among participants. These
+                            activities will
+                            provide a fun and engaging break from coding while fostering a positive atmosphere for all
+                            attendees.</p>
+                        <!-- <div class="prize-image-1">
+                        <img class="prize-image-1-img"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/706px-Google_%22G%22_Logo.svg.png">
+                    </div>
+                    <p class="card-caption">* Each team member will recieve one of each prize</p> -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="prizes-footer">
+                <span>And much more...</span>
+            </div>
+        </div>
+        <div class="saturn" id="saturn">
+            <img src="/static/images/saturn.png">
+        </div>
+
+        <!-- <div class="speakers" id="speakers">
+            <div class="arrow-left">
+                <img src="/static/images/arrows-1.svg">
+            </div>
+            <div class="arrow-right">
+                <img src="/static/images/arrows-1.svg">
+            </div>
+            <div class="speakers-text">
+                <div class="speakers-heading">
+                    <h2>Speakers</h2>
+                </div>
+                <div class="csslider1 autoplay cs_handle" style="width:300px;">
+
+                    <input name="cs_anchor1" id="cs_slide1_0" type="radio" class="cs_anchor slide">
+                    <input name="cs_anchor1" id="cs_slide1_1" type="radio" class="cs_anchor slide">
+                    <input name="cs_anchor1" id="cs_slide1_2" type="radio" class="cs_anchor slide">
+                    <input name="cs_anchor1" id="cs_play1" type="radio" class="cs_anchor" checked="">
+
+                    <input name="cs_anchor1" id="cs_pause1_0" type="radio" class="cs_anchor pause">
+                    <input name="cs_anchor1" id="cs_pause1_1" type="radio" class="cs_anchor pause">
+                    <input name="cs_anchor1" id="cs_pause1_2" type="radio" class="cs_anchor pause">
+
+                    <ul>
+                        <div class="speakers-container">
+                            <img src="/static/images/Elon.png" style="height  : 100%;">
+                        </div>
+                        <li class="num0 slide-img">
+
+                            <img src="/static/images/pradeep.jpeg" alt="" title="">
+                            <div class="slider-heading">
+                                <p>Pradeep Gupta</p>
+                            </div>
+                            <div class="slider-sub-heading">
+                                <p>Senior Director @ Nvidia</p>
+                            </div>
+                            <div class="slider-text">
+                                <p>Pradeep Gupta is the senior director of the Solutions Architecture and
+                                    Engineering team at NVIDIA, where he is responsible for autonomous driving. His
+                                    focus is on building production-grade AI that can be deployed in life-critical
+                                    systems. Previously, Pradeep worked in areas like high-performance computing,
+                                    computer vision, mathematical library development, and data center technologies.
+                                    He received a master's degree in research from the Indian Institute of Science
+                                    (IISc), Bangalore. His research focused on developing compute-efficient
+                                    algorithms.</p>
+                            </div>
+                            </a>
+                        </li>
+                        <li class="num1 slide-img">
+
+                            <img src="/static/images/denali-lumma.jpg " alt="" title="">
+                            <div class="slider-heading">
+                                <p>Denali Lumma</p>
+                            </div>
+                            <div class="slider-sub-heading">
+                                <p>Advsior @ Y Combinator</p>
+                            </div>
+                            <div class="slider-text">
+                                <p>AI Frameworks Engineering at Modular, ex-(Netflix, 23andMe, Okta, Uber, Box), Advisor (YCombinator, DevOps Research and Assessment)</p>
+                            </div>
+
+                            </a>
+
+                        </li>
+                        <li class="num2 slide-img">
+
+                            <img src="/static/images/coming-soon.png" alt="" title="">
+                            <div class="slider-heading">
+                                <p>TBD</p>
+                            </div>
+                            <div class="slider-sub-heading">
+                                <p>TBD</p>
+                            </div>
+                            <div class="slider-text">
+                                <p>TBD</p>
+                            </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="cs_bullets">
+                        <label class="num0" for="cs_slide1_0">
+                            <span class="cs_point"></span>
+                            <img src="/static/images/planet-3.png">
+                        </label>
+
+                        <label class="num1" for="cs_slide1_1">
+                            <span class="cs_point"></span>
+                            <img src="/static/images/planet-3.png">
+                        </label>
+                        <label class="num2" for="cs_slide1_2">
+                            <span class="cs_point"></span>
+                            <img src="/static/images/planet-3.png">
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div> -->
+
+        <div class="rocket" id="rocket" data-modifier="1">
+            <img class="rocket-image" src="/static/images/rocket.png">
+        </div>
+
+
+    <!-- 
+            <div class="card-container-2">
+                <div class="2-card-1 second-cards">
+                    <div class="card-heading">
+                        <p>What is a Hackathon?</p>
+                    </div>
+                    <div class="card-paragraph">
+                        <p>Hackathons are fast-paced events where individuals with diverse backgrounds collaborate in
+                            teams to
+                            create software or design solutions to real-world problems within a short timeframe,
+                            typically
+                            ranging from a few hours to a few days. The focus is on creativity, innovation, and
+                            producing a
+                            tangible result by the end of the event.</p>
+                    </div>
+                </div>
+                <div class="2-card-2 second-cards">
+                    <div class="card-heading">
+                        <p>Is the Hackathon Free?</p>
+                    </div>
+                    <div class="card-paragraph">
+                        <p>Los Gatos Hacks is completely free for all participants, offering an opportunity for individuals to
+                            showcase
+                            their
+                            skills and connect with like-minded individuals in the tech industry. </p>
+                    </div>
+                </div>
+                <div class="2-card-2 second-cards">
+                    <div class="card-heading">
+                        <p>What are the prizes?</p>
+                    </div>
+                    <div class="card-paragraph">
+                        <p>First: Paid Internship at sponsor, iPad 10th generation, Custom built PC with Nvidia 4070 and
+                            Dinner
+                            with mentors <br>
+                            Second: Dinner with mentors<br>
+                            Third: Dinner with mentors<br>
+                            Forth: Logitech C920x Webcam and microphone<br>
+                            Fifth: One year Spotify subscription and mechanical keyboard <br>
+                            Everyone: Los Gatos Hacks Branded T-shirt, water bottle and stickers </p>
+                    </div>
+                </div>
+                <div class="2-card-3 second-cards">
+                    <div class="card-heading">
+                        <p>Is there food provided?</p>
+                    </div>
+                    <div class="card-paragraph">
+                        <p>Yes, breakfast, lunch and dinner will be
+                            provided and free of charge. Please let us know of any
+                            accommodations you would like to have.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="2-card-4 second-cards">
+                    <div class="card-heading">
+                        <p>What is the time, date and location of Los Gatos Hacks?</p>
+                    </div>
+                    <div class="card-paragraph">
+                        <p>The first day is fully online which is on January 20th, the second day will be in-person on January
+                            21th at
+                            Los Gatos Highschool in the library. Los Gatos Hacks for both days will last from 8AM to 10PM. </p>
+                    </div>
+                </div>
+                <div class="2-card-5 second-cards">
+                    <div class="card-heading">
+                        <p>When is the application deadline?</p>
+                    </div>
+                    <div class="card-paragraph">
+                        <p>The application deadline is 5/22, make sure to sign up before then! </p>
+                    </div>
+                </div>
+                <div class="2-card-6 second-cards">
+                    <div class="card-heading">
+                        <p>How do the teams work?</p>
+                    </div>
+                    <div class="card-paragraph">
+                        <p>We will have teams of three who work together as a group on one project. Everyone of all
+                            skill levels
+                            can join!</p>
+                    </div>
+                </div>
+                <div class="2-card-7 second-cards">
+                    <div class="card-heading">
+                        <p>What if I don't have a team?</p>
+                    </div>
+                    <div class="card-paragraph">
+                        <p>Don't worry! We'll have team formation events at the beginning of the weekend geared towards
+                            helping
+                            you find people to work with. </p>
+                    </div>
+                </div>
+                <div class="2-card-8 second-cards">
+                    <div class="card-heading">
+                        <p>I STILL HAVE QUESTIONS!</p>
+                    </div>
+                    <div class="card-paragraph">
+                        <p>Feel free to join our Discord server or email us for more questions or concerns. </p>
+                    </div>
+                </div>
+            </div>
+        -->
+    </div>
+    <div class="content-absolute">
+        <!-- <div class="planet-3">
+            <video autoplay loop style="background-image: url(/static/images/hackathonvideo.mp4);" muted playsinline
+                data-object-fit="cover" <source src="/static/images/planet.mp4" type="video/mp4">
+            </video>
+        </div> -->
+    </div>
+    <div class="asteroid">
+        <img src="/static/images/planet-2.png">
+    </div>
+    <div class="satellite">
+        <img src="/static/images/satellite.png">
+    </div>
+    </div>
+    </div>
+
+
+
+    <div class="schedule-main-container">
+        <div class="schedule-heading" id="schedule-heading">
+            <h2>Schedule</h2>
+        </div>
+        <div class="schedule-container">
+            <div class="svg-container" style="position: relative">
+                <div class="arrow-container">
+                    <svg id="arrowsvg" style="transform: none" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 50 640" width="40" height="600">
+                        <path class="arrowpath" opacity="1" fill-opacity="0" stroke="#b8d3d1" stroke-width="5"
+                            stroke-linecap="round" stroke-opacity="1" d="M10 636.03L10 6.33" id="a2v1t8OFOh"
+                            style="transition: stroke-dashoffset 2s ease-in-out 0s; visibility: visible; stroke-dasharray: 629.7, 629.7; stroke-dashoffset: 0;">
+                        </path>
+                    </svg>
+                </div>
+                <div class="path-container" id="path-container">
+                    <svg class="sched-line" id="sched-line" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 640 640" width="600" height="640">
+                        <path class="mainpath" id="mainpath" opacity="1" fill-opacity="0" stroke="#ce7b91"
+                            stroke-width="5" stroke-opacity="1" stroke-dasharray="1500 1500"
+                            d="M626.47 348.06C510.93 614.72 410.81 614.72 326.11 348.06C241.41 81.39 141.53 81.39 26.47 348.06"
+                            style="transition: stroke-dashoffset 2s ease-in-out 0s; visibility: visible; stroke-dasharray: 1047.29, 1047.29; stroke-dashoffset: 0;">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="schedule">
+
+            <div class="schedule-top" style="margin-bottom: 2vh">
+                <span class="leftarrow" id="leftarrow" onclick="shiftBackward()"><svg id="leftarrow-svg"
+                        fill="gainsboro" width="800px" height="800px" viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.95 5.843L7.828 7.964l2.122 2.122L8.536 11.5 5 7.964 8.536 4.43 9.95 5.843zM8 16c-4.418 0-8-3.59-8-8 0-4.418 3.59-8 8-8 4.418 0 8 3.59 8 8 0 4.418-3.59 8-8 8zm0-2c3.307 0 6-2.686 6-6 0-3.307-2.686-6-6-6-3.307 0-6 2.686-6 6 0 3.307 2.686 6 6 6z"
+                            fill-rule="evenodd" />
+                    </svg></span>
+                <pre id="day">Saturday 1/20</pre>
+                <span class="rightarrow" id="rightarrow" onclick="shiftForward()">
+                    <svg id="rightarrow-svg" fill="gainsboro" width="800px" height="800px" viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.05 10.157l2.122-2.121L6.05 5.914 7.464 4.5 11 8.036 7.464 11.57 6.05 10.157zM8 0c4.418 0 8 3.59 8 8 0 4.418-3.59 8-8 8-4.418 0-8-3.59-8-8 0-4.418 3.59-8 8-8zm0 2C4.693 2 2 4.686 2 8c0 3.307 2.686 6 6 6 3.307 0 6-2.686 6-6 0-3.307-2.686-6-6-6z"
+                            fill-rule="evenodd" />
+                    </svg></span>
+            </div>
+            <div id="schedSat" style="box-shadow: 5px 10px 10px #050510;">
+                <div class="table100 ver1 m-b-110">
+                    <div class="table100-head">
+                        <table>
+                            <thead>
+                                <tr class="row100 head">
+                                    <th class="column1 header1">Time</th>
+                                    <th class="column2 header1">Event</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="table100-body js-pscroll">
+                        <table class="scheduleSat" id="table-saturday" style="overflow-y: hidden; overflow-x: hidden">
+                            <tbody style="cursor: pointer">
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">9:00 AM</td>
+                                    <td class="cell100 column2">
+                                        Registration and Check-in
+                                    </td>
+                                </tr>
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">10:30 AM</td>
+                                    <td class="cell100 column2">Opening Ceremony and Welcome Speech</td>
+                                </tr>
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">11:30 AM</td>
+                                    <td class="cell100 column2">
+                                        Team Formation and Reveal Theme
+                                    </td>
+                                </tr>
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">12:00 PM</td>
+                                    <td class="cell100 column2">
+                                        Hacking Begins!
+                                    </td>
+                                </tr>
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">12:30 PM</td>
+                                    <td class="cell100 column2">
+                                        Workshop on Tools and Technologies
+                                    </td>
+                                </tr>
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">5:00 PM</td>
+                                    <td class="cell100 column2">Cup Stacking</td>
+                                </tr>
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">6:30 PM</td>
+                                    <td class="cell100 column2">Workshop On GitHub</td>
+                                </tr>
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">10:00 PM</td>
+                                    <td class="cell100 column2">Scavenger Hunt</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="schedSun" style="display: none; box-shadow: 5px 10px 10px #050510">
+                <div class="table100 ver1 m-b-110">
+                    <div class="table100-head">
+                        <table>
+                            <thead>
+                                <tr class="row100 head">
+                                    <th class="column1">Time</th>
+                                    <th class="column2">Event</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="table100-body js-pscroll">
+                        <table class="scheduleSun" id="table-sunday" style="overflow-y: hidden; overflow-x: hidden">
+                            <tbody style="cursor: pointer">
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">12:00 AM</td>
+                                    <td class="cell100 column2">
+                                        Midnight Surprise
+                                    </td>
+                                </tr>
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">1:00 AM</td>
+                                    <td class="cell100 column2">Clash Royale Tournament</td>
+                                </tr>
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">7:30 AM</td>
+                                    <td class="cell100 column2">Mentorship and Feedback Session</td>
+                                </tr>
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">8:00 AM</td>
+                                    <td class="cell100 column2">
+                                        Speaker (Google)
+                                    </td>
+                                </tr>
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">8:30 PM</td>
+                                    <td class="cell100 column2">Hacking Ends</td>
+                                </tr>
+                                </tr>
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">9:00 AM</td>
+                                    <td class="cell100 column2">Project Demos and Judging</td>
+                                </tr>
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">11:00 AM</td>
+                                    <td class="cell100 column2">Closing Ceremony and Awards</td>
+                                </tr>
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">12:00 PM</td>
+                                    <td class="cell100 column2">End Event</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <section class="smart_accordian-section">
+        <div class="accordian-container">
+
+            <div id="faq-heading" class="faq-heading">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="accourdian">
+                <div class="accordian-card">
+                    <div class="accordian-sub-heading">
+                        <p>General</p>
+                    </div>
+                    <div class="accordian-item item1">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            What is a Hackathon?
+                        </div>
+                        <div class="answer">
+                            <p>Los Gatos Hacks is a weekend-long event where hundreds of students from around the world
+                                come together to create software or design solutions to real-world problems. In
+                                teams of three, students will be given a theme and they will have the
+                                opportunity to design, build, and publish their own ideas with the help of
+                                mentors. </p>
+                        </div>
+                    </div>
+                    <div class="accordian-item item1">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            Who can participate?
+                        </div>
+                        <div class="answer">
+                            <p>Any high school or middle school student can participate.</p>
+                        </div>
+                    </div>
+                    <div class="accordian-item item1">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            What if I can't code?
+                        </div>
+                        <div class="answer">
+                            <p>No problem! We are accepting people regardless of experience and will be having
+                                workshops where you can learn to code</p>
+                        </div>
+                    </div>
+                    <div class="accordian-item item1">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            When is Los Gatos Hacks?
+                        </div>
+                        <div class="answer">
+                            <p>Los Gatos Hacks will be a weekend-long hackathon from January 20th-21st, 2024!</p>
+                        </div>
+                    </div>
+                    <div class="accordian-item item1">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            Where will Los Gatos Hacks take place?
+                        </div>
+                        <div class="answer">
+                            <p>Los Gatos Hacks will take place in the Los Gatos High School Library (20 High School Ct,
+                                Los Gatos, CA 95030
+                                ). </p>
+                        </div>
+                    </div>
+                    <div class="accordian-item item1">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            Is it free?
+                        </div>
+                        <div class="answer">
+                            <p>Yes! Thanks to the generous support of our sponsors, Los Gatos Hacks is free for all
+                                participants—all food, swag, and other costs are covered.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="accordian-card">
+                    <div class="accordian-sub-heading">
+                        <p>Registration</p>
+                    </div>
+                    <div class="accordian-item item2">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            Where do I register?
+                            <i class="icon ion-md-add"></i>
+                        </div>
+                        <div class="answer">
+                            <p>Click <a class="faq-register" target="_blank"
+                                    href="/form/">here</a>
+                                to register!</p>
+                        </div>
+                    </div>
+                    <div class="accordian-item item2">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            When is the application deadline?
+                            <i class="icon ion-md-add"></i>
+                        </div>
+                        <div class="answer">
+                            <p>Registration will open in early June and close on August 31st. Click <a
+                                    class="faq-register" target="_blank"
+                                    href="/form/">here</a>
+                                to register!</p>
+                        </div>
+                    </div>
+                    <div class="accordian-item item2">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            What if I don't have a team?
+                            <i class="icon ion-md-add"></i>
+                        </div>
+                        <div class="answer">
+                            <p>Don't worry! We'll have team formation events at the beginning of the weekend
+                                geared towards helping you find people to work with.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordian-item item2">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            Is there a code of conduct?
+                            <i class="icon ion-md-add"></i>
+                        </div>
+                        <div class="answer">
+                            <p>Yes! All hackers must follow the <a class="faq-register" target="_blank"
+                                    href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of
+                                    Conduct</a>. The packet must be signed in order to attend.</p>
+                        </div>
+                    </div>
+                    <div class="accordian-item item2">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            How do teams work?
+                            <i class="icon ion-md-add"></i>
+                        </div>
+                        <div class="answer">
+                            <p>Your team can have up to 3 people! You can select teammates when you register,
+                                and you can also form them during the actual event!</p>
+                        </div>
+                    </div>
+                    <div class="accordian-item item2">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            Do you offer travel reimbursements?
+                            <i class="icon ion-md-add"></i>
+                        </div>
+                        <div class="answer">
+                            <p>Yes! Thanks to the generous support of our sponsors, Los Gatos Hacks is offering travel
+                                reimbursements on a case-by-case basis. Please fill out the <a class="faq-register-2"
+                                    target="_blank" href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">travel
+                                    reimbursement form</a> in addition to registering for Los Gatos Hacks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordian-card">
+                    <div class="accordian-sub-heading">
+                        <p>In Person Logistics</p>
+                    </div>
+                    <div class="accordian-item item3">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            Is Los Gatos Hacks Fully In Person?
+                            <i class="icon ion-md-add"></i>
+                        </div>
+                        <div class="answer">
+                            <p>Yes. Los Gatos Hacks will be fully in person and in person attendance on both days will
+                                be
+                                mandatory.</p>
+                        </div>
+                    </div>
+                    <div class="accordian-item item3">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            What will I eat?
+                            <i class="icon ion-md-add"></i>
+                        </div>
+                        <div class="answer">
+                            <p>We’ll provide food for all meals from Saturday’s breakfast to Sunday’s lunch. Of
+                                course, we’ll also have an abundance of snacks and drinks throughout the hacking
+                                period.</p>
+                        </div>
+                    </div>
+                    <div class="accordian-item item3">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            What if I have dietary restrictions?
+                            <i class="icon ion-md-add"></i>
+                        </div>
+                        <div class="answer">
+                            <p>No problem! If you have dietary restrictions, simply add them to your
+                                registration form when you sign up, and we will accommodate for you!
+                                Additionally, each meal will have vegan, gluten free, and vegetarian options for
+                                everyone.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordian-card">
+                    <div class="accordian-sub-heading">
+                        <p>Miscellaneous</p>
+                    </div>
+                    <div class="accordian-item item4">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            Where do I get more information?
+                            <i class="icon ion-md-add"></i>
+                        </div>
+                        <div class="answer">
+                            <p>Check out our Devpost and our info page for more info!</p>
+                        </div>
+                    </div>
+                    <div class="accordian-item item4">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            I have another question!
+                            <i class="icon ion-md-add"></i>
+                        </div>
+                        <div class="answer">
+                            <p>Great, we're always open to questions! Feel free to contact us at <a class="faq-email"
+                                href="mailto:support@losgatoshacks.com">support@losgatoshacks.com</a>! Or,
+                                check out more info about Los Gatos Hacks on our info page!</p>
+                        </div>
+                    </div>
+                    <div class="accordian-item item4">
+
+                        <div class="accordian-link">
+                            <div class="accordian-image">
+                                <img src="/static/images/faq_star.svg">
+                            </div>
+                            What should I bring?
+                            <i class="icon ion-md-add"></i>
+                        </div>
+                        <div class="answer">
+                            <p>Bring a valid student ID, a laptop, chargers, and the signed Parent Packet. There
+                                will be a limited amount of laptops that will be available to borrow. Power
+                                strips, sleeping bags, eye masks, and toiletries are highly recommended.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="telescope">
+        <img src="/static/images/telescope.png">
+    </div>
+    <div class="sponsors-container-1">
+    <div id="sponsors-heading" class="sponsors-heading">
+        <h2>Sponsors</h2>
+    </div>
+    <div class="sponsors">
+        
+        
+        <div class="silver">
+            <div class="silver-header">
+                <span>Silver</span>
+            </div>
+                   <div class="sponsors-container">
+            <!-- <div class="sponsors-placeholder">
+                <p>More Sponsors Coming Soon!</p>
+            </div> -->
+    
+            <div class="sponsors-card sponsors-card-silver">
+                <a class="sponsor-href" target="_blank" href="https://www.my-tea.org/">
+                <div class="sponsors-image sponsor-image-silver">
+                    <img src="https://i.imgur.com/L1Iey3k.png">
+                </div>
+                <div class="sponsors-name sponsors-name-silver">
+                    <p>TEA</p>
+                </div>
+                </a>
+            </div>
+            </div>
+            </div>
+        <div class="bronze">
+        <div class="bronze-header">
+            <span>Bronze</span>
+        </div>
+               <div class="sponsors-container">
+        <!-- <div class="sponsors-placeholder">
+            <p>More Sponsors Coming Soon!</p>
+        </div> -->
+
+        <div class="sponsors-card sponsors-card-bronze">
+            <a class="sponsor-href" target="_blank" href="https://www.doubling.io/">
+            <div class="sponsors-image sponsor-image-bronze">
+                <img src="https://media.licdn.com/dms/image/D560BAQGSlHcwcPXLxA/company-logo_200_200/0/1667496990583?e=2147483647&v=beta&t=Fb_njonLatP22XYWa4CZKjCokmyOhLG_pZZYKRQasFU">
+            </div>
+            <div class="sponsors-name sponsors-name-bronze">
+                <p>Doubling</p>
+            </div>
+            </a>
+        </div>
+        
+        </div>
+        </div>
+        <div class="special">
+        <div class="special-header">
+            <span>Special Sponsorships</span>
+        </div>
+               <div class="sponsors-container">
+        <!-- <div class="sponsors-placeholder">
+            <p>More Sponsors Coming Soon!</p>
+        </div> -->
+
+        <div class="sponsors-card">
+            <a class="sponsor-href" target="_blank" href="https://www.yubico.com/">
+            <div class="sponsors-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqH2G_KKTr-RvAinwGDqtUozSGbROJqhqY9nlXz7xhdr__rUQ9ANpErEHN1mSZ2VMPQ0g&usqp=CAU">
+            </div>
+            <div class="sponsors-name">
+                <p>Yubico</p>
+            </div>
+            </a>
+        </div>
+        <div class="sponsors-card">
+            <a class="sponsor-href" target="_blank" href="https://orenshummus.com/">
+            <div class="sponsors-image">
+                <img src="data:image/png;base64,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">
+            </div>
+            <div class="sponsors-name">
+                <p>Oren's Hummus</p>
+            </div>
+            </a>
+        </div>
+        <div class="sponsors-card">
+            <a class="sponsor-href" target="_blank" href="https://artofproblemsolving.com/">
+            <div class="sponsors-image">
+                <img src="https://i.imgur.com/LjDzE5B.png">
+            </div>
+            <div class="sponsors-name">
+                <p>AoPs</p>
+            </div>
+            </a>
+        </div>
+        
+        <div class="sponsors-card">
+            <a class="sponsor-href" target="_blank" href="https://www.desmos.com/">
+            <div class="sponsors-image">
+                <img src="https://i.imgur.com/JZZ8fGO.png">
+            </div>
+            <div class="sponsors-name">
+                <p>Desmos</p>
+            </div>
+            </a>
+        </div>
+        </div>
+    </div>
+    <div class="special">
+        <div class="made-header">
+            <span>Made possible by</span>
+        </div>
+            <div class="sponsors-container">
+                <a target="_blank" class="made-container" href="https://hackclub.com/">
+                <img src="/static/images/hcb-logo-original-dark.svg" alt="Powered by Hack Club Bank Badge" class="hbc-img">
+                </a>
+            </div>
+    </div>
+</div>
+    <svg class="transition-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+        preserveAspectRatio="none">
+        <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="transition"></path>
+    </svg>
+    
+    <div class="about-content-1" id="about-content-1">
+        <div class="about-heading" id="about-heading">
+            <h2>Our Team</h2>
+        </div>
+        <span class="director-heading">Directors</span>
+        <div class="large-team-container">
+            <div class="col-6 large-team-card">
+                <div class="image-border">
+                    <div class="large-team-image">
+                        <img src="/static/images/Edwin.jpg">
+
+                    </div>
+                </div>
+                <div class="large-team-name overflow">
+                    <p>Edwin Hou</p>
+                </div>
+                <div class="large-team-position">
+                    <p>Founder & Operations Director</p>
+                </div>
+            </div>
+            <div class="col-6 large-team-card">
+                <div class="image-border">
+                    <div class="large-team-image">
+                        <div class="image-card-container">
+
+                        </div>
+                        <img src="/static/images/eric-hou.png">
+                    </div>
+                </div>
+                <div class="large-team-name overflow">
+                    <p>Eric Hou</p>
+                </div>
+                <div class="large-team-position">
+                    <p>Founder & Tech Director</p>
+                </div>
+            </div>
+        </div>
+        <div class="director-container gellix threefr">
+            <div class="team-card">
+                <div class="team-border-2">
+                    <div class="team-image">
+                        <img src="/static/images/henry-lee.jpg">
+                    </div>
+                </div>
+                <figcaption class="team-name overflow">
+                    <p>Henry Lee</p>
+                </figcaption>
+                <div class="team-position">
+                    <p>Outreach Director</p>
+                </div>
+            </div>
+            
+            <div class="team-card">
+                <div class="team-border-2">
+                    <div class="team-image">
+                        <img src="/static/images/anthony-nguyen.jpg">
+                    </div>
+                </div>
+                <div class="team-name overflow">
+                    <p>Anthony Nguyen</p>
+                </div>
+                <div class="team-position">
+                    <p>Sponsorships Director</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-border-2">
+                    <div class="team-image">
+                        <img src="/static/images/Andreas.png">
+                    </div>
+                </div>
+                <div class="team-name overflow overflow">
+                    <p>Andreas Haapalainen</p>
+                </div>
+                <div class="team-position">
+                    <p>Design Director</p>
+                </div>
+            </div>
+
+        </div>
+        <span class="about-sub-heading">Sponsorship</span>
+        <div class="sponsorship-team-container gellix threefr">
+
+            <div class="team-card">
+                <div class="team-border-2">
+                    <div class="team-image">
+                        <img src="/static/images/jack-mei.png">
+                    </div>
+                </div>
+                <div class="team-name overflow">
+                    <p>Jack Mei</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-border-2">
+                    <div class="team-image">
+                        <img src="/static/images/naitik-gupta.png">
+                    </div>
+                </div>
+
+                <div class="team-name overflow overflow">
+                    <p>Naitik Gupta</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-border-2">
+                    <div class="team-image">
+                        <img src="/static/images/Ashir.png">
+                    </div>
+                </div>
+
+                <div class="team-name overflow overflow">
+                    <p>Ashir Rao</p>
+                </div>
+            </div>
+        </div>
+        <span class="about-sub-heading">Tech</span>
+        <div class="tech-team-container gellix twofr">
+            
+            <div class="team-card">
+                <div class="team-border-2">
+                    <div class="team-image">
+                        <img src="/static/images/julian-juan.png">
+                    </div>
+                </div>
+                <div class="team-name overflow">
+                    <p>Julian Juan</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-border-2">
+                    <div class="team-image">
+                        <img src="/static/images/arnavpatel.png">
+                    </div>
+                </div>
+                <figcaption class="team-name overflow overflow">
+                    <p>Arnav Patel</p>
+                </figcaption>
+            </div>
+        </div>
+        <!-- <span class="about-sub-heading">Outreach</span>
+        <div class="outreach-team-container gellix onefr">
+            
+            
+
+        </div> -->
+    </div>
+
+
+    </div>
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-left">
+                <div class="footer-left-container">
+                    <div class="footer-logo">
+                        <a href="/">
+                            <img src="/static/images/losgatoshacksbigsimple.png">
+                        </a>
+                    </div>
+                    <div class="footer-socials">
+                        <ul role="list" class="list-2 left-list w-list-unstyled">
+                            <li style="list-style-type: none;">
+                                <a href="https://github.com/erichou1/losgatoshacks2024" target="_blank" class="w-inline-block">
+                                    <img src="https://assets-global.website-files.com/625c39b93541414104a1d654/625c8d419181da2418a66b2d_github.svg"
+                                        loading="lazy" alt="" class="image-3">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/CuumumdXtg" target="_blank" class="w-inline-block">
+                                    <img src="https://assets-global.website-files.com/625c39b93541414104a1d654/625c8d4290b5f0189929d637_discord.svg"
+                                        loading="lazy" alt="" class="image-3">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/losgatoshacks" target="_blank" class="w-inline-block"><img
+                                        src="https://assets-global.website-files.com/625c39b93541414104a1d654/625c8d416d89770f92cd01e2_twitter.svg"
+                                        loading="lazy" alt="" class="image-3">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:support@losgatoshacks.com" class="w-inline-block"><img
+                                        src="https://assets-global.website-files.com/625c39b93541414104a1d654/6294b5a90a9ffe8e79e52115_Group%2037323.svg"
+                                        loading="lazy" alt="" class="image-3">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-register">
+                    <div class="footer-register-text">
+                        <h5>Register For the Los Gatos Hacks Hackathon</h5>
+                    </div>
+                    <a class="footer-register-button button" target="_blank"
+                        href="/form/">Register</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-left">
+                <div class="copyright">
+                    <h6>Copyright © 2024 Los Gatos Hacks, a 501(c)(3) non-profit organization</h6>
+                </div>
+            </div>
+            <div class="footer-bottom-right">
+                <div class="footer-nav-container">
+                    <a href="/" class="footer-nav">
+                        <h6 class="footer-link-title">Home</h6>
+                    </a>
+                    <a href="/#content-2" class="footer-nav">
+                        <h6 class="footer-link-title">Information</h6>
+                    </a>
+                    <a href="/#faq-heading" class="footer-nav">
+                        <h6 class="footer-link-title">FAQ</h6>
+                    </a>
+                    <a href="/#schedule-heading" class="footer-nav">
+                        <h6 class="footer-link-title">Schedule</h6>
+                    </a>
+                    <a href="/#sponsors-heading" class="footer-nav">
+                        <h6 class="footer-link-title">Sponsors</h6>
+                    </a>
+                    <a href="/#about-heading" class="footer-nav">
+                        <h6 class="footer-link-title">Team</h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var $saturn = $('.saturn');
+    var $win = $(window);
+    $win.on('scroll', function () {
+        var top = $win.scrollTop() / 15;
+        $saturn.css('transform', 'translate3d(0px,' + top + 'px, 0px)');
+    }
+    );
+
+    var $rocket = $('.rocket');
+    //var $win = $(window);
+    // $win.on('scroll', function () {
+    //         
+    //         var top2 = $win.scrollTop() / 5;
+    // $rocket.css('transform', 'translate3d(-' + top2 + 'px,-' + top2 + 'px,0px)'); 
+    //     }
+    //     );
+
+    var $asteroid = $('.asteroid');
+    var $win = $(window);
+    $win.on('scroll', function () {
+        var top3 = $win.scrollTop() / 5;
+        $asteroid.css('transform', 'translate3d(0px,' + top3 + 'px,0px)');
+    }
+    );
+    var $satellite = $('.satellite');
+    var $win = $(window);
+    $win.on('scroll', function () {
+        var top4 = $win.scrollTop() / 10;
+        $satellite.css('transform', 'translate3d(' + top4 + 'px,' + top4 + 'px, 0px)');
+    }
+    );
+    var $planet2 = $('.planet-2');
+    var $win = $(window);
+    $win.on('scroll', function () {
+        var top5 = $win.scrollTop() / 7;
+        $planet2.css('transform', 'translate3d(0px,' + top5 + 'px,0px)');
+    }
+    );
+    $(document).ready(function () {
+        $('.container ul.toggle').click(function () {
+            $(this).toggleClass('active');
+            $('.container .sidebar').toggleClass('active');
+        })
+    })
+    $(document).ready(function () {
+        document.querySelector("label.num0").click()
+        $('.menu a').click(function () {
+            $('.container ul.toggle').toggleClass('active');
+            $('.container .sidebar').toggleClass('active');
+        })
+    })
+    //         $(document).ready(function () {
+
+    // $('.faq-navbar').click(function () {
+
+    // $('html,body').animate({
+    // scrollTop: $("#faq-heading").offset().top},
+    //         'fast');
+    // });
+    // });
+    var winScrollTop = 0;
+
+    $.fn.is_on_screen = function () {
+        var win = $(window);
+        var viewport = {
+            top: win.scrollTop(),
+            left: win.scrollLeft()
+        };
+        //viewport.right = viewport.left + win.width();
+        viewport.bottom = viewport.top + win.height();
+
+        var bounds = this.offset();
+        //bounds.right = bounds.left + this.outerWidth();
+        bounds.bottom = bounds.top + this.outerHeight();
+
+        return (!(viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+    };
+
+    function parallax() {
+        var scrolled = $(window).scrollTop();
+        $('.rocket').each(function () {
+
+            if ($(this).is_on_screen()) {
+                var firstTop = $(this).offset().top;
+                var $rocket = $(this).find(".rocket-image");
+                var moveTop = (firstTop - winScrollTop) * 0.1 //speed;
+                $rocket.css('transform', 'translate3d(-' + moveTop + 'px,-' + moveTop + 'px,0px)');
+            }
+
+        });
+    }
+
+    $(window).scroll(function (e) {
+        winScrollTop = $(this).scrollTop();
+        parallax();
+    });
+
+    faq = 1;
+    $(document).ready(function () {
+        let cards = document.querySelectorAll(".accordian-link");
+        [...cards].forEach((card) => {
+
+            card.addEventListener("click", function () {
+                $(this).parent().find(".accordian-link, .answer").toggleClass("open");
+                if ($(this).find("div.accordian-image")[0].style.animation == "0.5s linear 0s 1 normal none running star-spin") {
+                    $(this).find("div.accordian-image")[0].style.animation = "star-spin-back 0.5s linear";
+                }
+                else {
+                    $(this).find("div.accordian-image")[0].style.animation = "star-spin 0.5s linear";
+                }
+
+            });
+        });
+    });
+
+    var $telescope = $('.telescope');
+    var $win = $(window);
+    $win.on('scroll', function () {
+        var top6 = $win.scrollTop() / 10;
+        $telescope.css('transform', 'translate3d(0px,' + top6 + 'px,0px)');;
+    }
+    );
+    function showSVG() {
+        var path = document.querySelector(".mainpath");
+        var length = path.getTotalLength();
+
+        path.style.transition = path.style.WebkitTransition = "none";
+        path.style.visibility = "visible";
+
+        path.style.strokeDasharray = length + " " + length;
+        path.style.strokeDashoffset = length;
+
+        path.getBoundingClientRect();
+
+        path.style.transition = path.style.WebkitTransition =
+            "stroke-dashoffset 2s ease-in-out";
+
+        path.style.strokeDashoffset = "0";
+
+        path = document.querySelector(".arrowpath");
+        length = path.getTotalLength();
+
+        path.style.transition = path.style.WebkitTransition = "none";
+        path.style.visibility = "visible";
+
+        path.style.strokeDasharray = length + " " + length;
+        path.style.strokeDashoffset = length;
+
+        path.getBoundingClientRect();
+
+        path.style.transition = path.style.WebkitTransition =
+            "stroke-dashoffset 2s ease-in-out";
+
+        path.style.strokeDashoffset = "0";
+    }
+    $(document).ready(function () {
+        if ($(".mainpath").is_on_screen()) {
+
+        }
+    });
+    var done = false
+    $(window).scroll(function (event) {
+
+        $(".mainpath").each(function (i, el) {
+            var el = $(el);
+            if (el.is_on_screen()) {
+                if (done == false) {
+                    showSVG();
+                    done = true
+                }
+            }
+        })
+    });
+
+    var shiftDay = "Saturday 1/20";
+
+    const leftarrow = document.getElementById("leftarrow");
+    const rightarrow = document.getElementById("rightarrow");
+    function shiftBackward() {
+        if (shiftDay == "Sunday 1/21") {
+            shiftDay = "Saturday 1/20";
+            document.getElementById("day").innerHTML = "Saturday 1/20";
+            document.getElementById("schedSun").style.display = "none";
+            document.getElementById("leftarrow-svg").style.fill = "gray";
+            document.getElementById("rightarrow").style.cursor = "pointer";
+            document.getElementById("leftarrow").style.cursor = "default";
+            document.getElementById("rightarrow-svg").style.fill = "gainsboro";
+            document.getElementById("schedSat").style.display = "block";
+        }
+    }
+
+    function shiftForward() {
+        if (shiftDay == "Saturday 1/20") {
+            shiftDay = "Sunday 1/21";
+            document.getElementById("day").innerHTML = "Sunday 1/21";
+            document.getElementById("schedSat").style.display = "none";
+            document.getElementById("leftarrow-svg").style.fill = "gainsboro";
+            document.getElementById("rightarrow").style.cursor = "default";
+            document.getElementById("leftarrow").style.cursor = "pointer";
+            document.getElementById("rightarrow-svg").style.fill = "gray";
+            document.getElementById("schedSun").style.display = "block";
+        }
+    }
+    $(document).ready(function () {
+
+        let overflows = document.querySelectorAll(".overflow");
+        for (let i = 0; i < overflows.length; i++) {
+            let overflow = overflows[i]
+            if (overflow.scrollWidth > overflow.offsetWidth) {
+
+                overflow.textContent = overflow.textContent.split(/(\s+)/).filter(function (e) { return e.trim().length > 0; })[0] + ' ' + overflow.textContent.split(/(\s+)/).filter(function (e) { return e.trim().length > 0; })[1][0] + '.'
+            }
+
+        }
+
+    })
+    $(window).resize(function () {
+        let overflows = document.querySelectorAll(".overflow");
+        for (let i = 0; i < overflows.length; i++) {
+            let overflow = overflows[i]
+            if (overflow.scrollWidth > overflow.offsetWidth) {
+                overflow.textContent = overflow.textContent.split(/(\s+)/).filter(function (e) { return e.trim().length > 0; })[0] + ' ' + overflow.textContent.split(/(\s+)/).filter(function (e) { return e.trim().length > 0; })[1][0] + '.'
+            }
+        }
+    });
+
+    console.log(`
+ o    o               8       o    o
+ 8    8               8       'b  d'
+o8oooo8 .oPYo. .oPYo. 8  .o    'bd'
+ 8    8 .oooo8 8    ' 8oP'     .PY.
+ 8    8 8    8 8    . 8 'b.   .P  Y.
+ 8    8 'YooP8 'YooP' 8  'o. .P    Y.
+`);
+
+    if (/webOS|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        $("#warningheader").show();
+    } else {
+        $("#warningheader").hide();
+    }
+    function hide() {
+        $("#warningheader").hide();
+    }
+</script>
+</body>
