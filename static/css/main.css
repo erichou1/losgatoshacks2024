@@ -4592,7 +4592,7 @@ tr:hover {
     background-color: #f5ecd7;
     text-align: center;
     margin-top: 0;
-    padding: 4.5rem 2rem 8rem;
+    padding: 4.5rem 2rem 5rem;
     position: relative;
     z-index: 1;
 }
@@ -4627,6 +4627,7 @@ tr:hover {
 
 .thank-you-transition-svg + .content-2 {
     margin-top: 0 !important;
+    padding-top: 4rem !important;
 }
 
 @media (max-width: 1265px) {
